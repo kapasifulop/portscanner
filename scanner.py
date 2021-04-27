@@ -69,14 +69,14 @@ try:
 		if(port + h > 65535):
 			sys.exit()
 		threads.clear()
-		for i in range(50):
+		for i in range(300):
 			prt = port + i + h
 			t = threading.Thread(target=run_with_limited_time, args=(scan_a_port, (prt, target,), {}, timeout,))
 			t.daemon = True
 			threads.append(t)
-		for i in range(50):
+		for i in range(300):
 			threads[i].start()
-		for i in range(50):
+		for i in range(300):
 			threads[i].join()
 		h += 50
 except KeyboardInterrupt:
