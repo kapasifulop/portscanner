@@ -1,4 +1,4 @@
-# portscanner
+# Fast portscanner
 Usage
 ```python
 python3 scanner.py <ip> <debugging> <socket timeout>
